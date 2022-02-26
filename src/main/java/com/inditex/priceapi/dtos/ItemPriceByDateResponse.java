@@ -2,18 +2,44 @@ package com.inditex.priceapi.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class ItemPriceByDateResponse {
     @JsonProperty("brand_id")
     private int brandId;
     @JsonProperty("product_id")
-    private String productId;
+    private int productId;
     @JsonProperty("price_list")
     private int priceList;
-    private float price;
+    @JsonProperty("price")
+    private BigDecimal price;
     @JsonProperty("from_date")
-    private String fromDate;
+    private LocalDateTime fromDate;
     @JsonProperty("to_date")
-    private String toDate;
+    private LocalDateTime toDate;
+
+    public void setBrandId(int brandId) {
+        this.brandId = brandId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public void setPriceList(int priceList) {
+        this.priceList = priceList;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public void setFromDate(LocalDateTime fromDate) {
+        this.fromDate = fromDate;
+    }
+
+    public void setToDate(LocalDateTime toDate) {
+        this.toDate = toDate;
+    }
 }

@@ -19,21 +19,14 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 public class RestTemplateExceptionHandler extends DefaultResponseErrorHandler {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(PricesController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PricesController.class);
 
-	@ExceptionHandler(value = { HttpServerErrorException.class, HttpClientErrorException.class })
-	protected ResponseEntity<?> handleConflict(HttpClientErrorException e, HttpServletRequest request) {
-		LOGGER.error("Falló en " + request.getRequestURI(), e);
-		try {
-			ObjectMapper mapper = new ObjectMapper();
-			return ResponseEntity.badRequest().body(mapper.readValue(e.getResponseBodyAsString(), ApiError.class));
-		} catch (Exception ex) {
-			LOGGER.error("Fallo en exceptionHandler: ", ex);
-			return ResponseEntity.status(503).body(new ApiError(ErrorMessage.SERVICE_UNAVAILABLE_ERROR.toString(),
-					ErrorMessage.SERVICE_UNAVAILABLE_ERROR.getErrorMessage()));
+    @ExceptionHandler(value = {IllegalArgumentException.class})
+    protected ResponseEntity<?> handleConflict(IllegalArgumentException ie, HttpServletRequest request) {
+        LOGGER.error("Falló en " + request.getRequestURI(), ie);
 
-		}
+        return ResponseEntity.badRequest().body(ie.getMessage());
 
-	}
+    }
 
 }

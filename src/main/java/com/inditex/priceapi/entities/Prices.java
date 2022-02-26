@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -29,15 +30,15 @@ public class Prices {
     @Column(name = "price_list")
     private int price_list;
     @Column(name = "product_id")
-    private String product_id;
+    private int product_id;
     @Column(name = "priority")
     private int priority;
     @Column(name = "price")
-    private float price;
+    private BigDecimal price;
     @Column(name = "curr")
     private String curr;
 
-    public Prices(int brand_id, LocalDateTime start_date, LocalDateTime end_date, int price_list, String product_id, int priority, float price, String curr) {
+    public Prices(int brand_id, LocalDateTime start_date, LocalDateTime end_date, int price_list, int product_id, int priority, BigDecimal price, String curr) {
         this.brand_id = brand_id;
         this.start_date = start_date;
         this.end_date = end_date;
@@ -71,7 +72,7 @@ public class Prices {
         return price_list;
     }
 
-    public String getProduct_id() {
+    public int getProduct_id() {
         return product_id;
     }
 
@@ -79,7 +80,7 @@ public class Prices {
         return priority;
     }
 
-    public float getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 

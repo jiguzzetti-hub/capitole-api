@@ -42,4 +42,16 @@ public class ItemPriceByDateResponse {
     public void setToDate(LocalDateTime toDate) {
         this.toDate = toDate;
     }
+
+    public ItemPriceByDateResponse(int brandId, int productId, int priceList, BigDecimal price, LocalDateTime fromDate, LocalDateTime toDate) {
+        this.brandId = brandId;
+        this.productId = productId;
+        this.priceList = priceList;
+        this.price = price;
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+    }
+
+    public ItemPriceByDateResponse() {
+    }
 }

@@ -22,15 +22,15 @@ public class Prices {
     private Long id;
 
     @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "FK_BRAND_PRICES"))
-    private int brand_id;
+    private int brandId;
     @Column(name = "start_date")
-    private LocalDateTime start_date;
+    private LocalDateTime startDate;
     @Column(name = "end_date")
-    private LocalDateTime end_date;
+    private LocalDateTime endDate;
     @Column(name = "price_list")
-    private int price_list;
+    private int priceList;
     @Column(name = "product_id")
-    private int product_id;
+    private int productId;
     @Column(name = "priority")
     private int priority;
     @Column(name = "price")
@@ -38,12 +38,13 @@ public class Prices {
     @Column(name = "curr")
     private String curr;
 
-    public Prices(int brand_id, LocalDateTime start_date, LocalDateTime end_date, int price_list, int product_id, int priority, BigDecimal price, String curr) {
-        this.brand_id = brand_id;
-        this.start_date = start_date;
-        this.end_date = end_date;
-        this.price_list = price_list;
-        this.product_id = product_id;
+    public Prices(Long id, int brandId, LocalDateTime startDate, LocalDateTime endDate, int priceList, int productId, int priority, BigDecimal price, String curr) {
+        this.id = id;
+        this.brandId = brandId;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.priceList = priceList;
+        this.productId = productId;
         this.priority = priority;
         this.price = price;
         this.curr = curr;
@@ -56,35 +57,71 @@ public class Prices {
         return id;
     }
 
-    public int getBrand_id() {
-        return brand_id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public LocalDateTime getStart_date() {
-        return start_date;
+    public int getBrandId() {
+        return brandId;
     }
 
-    public LocalDateTime getEnd_date() {
-        return end_date;
+    public void setBrandId(int brandId) {
+        this.brandId = brandId;
     }
 
-    public int getPrice_list() {
-        return price_list;
+    public LocalDateTime getStartDate() {
+        return startDate;
     }
 
-    public int getProduct_id() {
-        return product_id;
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
+    }
+
+    public int getPriceList() {
+        return priceList;
+    }
+
+    public void setPriceList(int priceList) {
+        this.priceList = priceList;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public int getPriority() {
         return priority;
     }
 
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
     public BigDecimal getPrice() {
         return price;
     }
 
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
     public String getCurr() {
         return curr;
+    }
+
+    public void setCurr(String curr) {
+        this.curr = curr;
     }
 }

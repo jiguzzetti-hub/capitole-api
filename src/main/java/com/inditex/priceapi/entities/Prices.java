@@ -1,5 +1,6 @@
 package com.inditex.priceapi.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
@@ -11,7 +12,7 @@ import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 @Entity
-@SequenceGenerator(name = "SEQ_PRICES", allocationSize = 1, sequenceName = "SEQ_PRICES")
+@SequenceGenerator(name = "SEQ_PRICES", initialValue = 1, allocationSize = 1, sequenceName = "SEQ_PRICES")
 @Table(name= "PRICES")
 public class Prices {
 
@@ -21,13 +22,34 @@ public class Prices {
 
     @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "FK_BRAND_PRICES"))
     private int brand_id;
+    @Column(name = "start_date")
     private LocalDateTime start_date;
+    @Column(name = "end_date")
     private LocalDateTime end_date;
+    @Column(name = "price_list")
     private int price_list;
+    @Column(name = "product_id")
     private String product_id;
+    @Column(name = "priority")
     private int priority;
+    @Column(name = "price")
     private float price;
+    @Column(name = "curr")
     private String curr;
+
+    public Prices(int brand_id, LocalDateTime start_date, LocalDateTime end_date, int price_list, String product_id, int priority, float price, String curr) {
+        this.brand_id = brand_id;
+        this.start_date = start_date;
+        this.end_date = end_date;
+        this.price_list = price_list;
+        this.product_id = product_id;
+        this.priority = priority;
+        this.price = price;
+        this.curr = curr;
+    }
+
+    public Prices() {
+    }
 
     public Long getId() {
         return id;

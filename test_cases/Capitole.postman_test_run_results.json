@@ -1,0 +1,203 @@
+{
+	"id": "a8e0ebfd-5943-4137-9955-cd64b52c3e14",
+	"name": "Capitole",
+	"timestamp": "2022-02-26T23:04:31.081Z",
+	"collection_id": "15737517-022752ed-e32f-46cb-a731-5643eb012275",
+	"folder_id": 0,
+	"environment_id": "9bebc54e-9b15-477b-8318-51ae98dd1dd5",
+	"totalPass": 10,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7ccd2b21-55b4-4bc5-812a-c479f20169c8",
+			"name": "getItemPriceByDatetime - Test 1",
+			"url": "http://localhost:8082/inditex/prices/getItemPriceByDate/1/35455/2020-06-14%2010:00:00",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "6bda4c57-b8d3-4a09-b2aa-a32cf95b06cb",
+			"name": "getItemPriceByDatetime - Test 2",
+			"url": "http://localhost:8082/inditex/prices/getItemPriceByDate/1/35455/2020-06-14%2016:00:00",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "7c2b60e7-0c9c-4c4e-973b-2f7894716166",
+			"name": "getItemPriceByDatetime - Test 3",
+			"url": "http://localhost:8082/inditex/prices/getItemPriceByDate/1/35455/2020-06-14%2021:00:00",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "d1057e58-e79c-41c6-8de8-83f912cee1ba",
+			"name": "getItemPriceByDatetime - Test 4",
+			"url": "http://localhost:8082/inditex/prices/getItemPriceByDate/1/35455/2020-06-15%2010:00:00",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "2ffc1cdf-7d1f-44e5-8df6-2d3b2dcbf238",
+			"name": "getItemPriceByDatetime - Test 5",
+			"url": "http://localhost:8082/inditex/prices/getItemPriceByDate/1/35455/2020-06-16%2021:00:00",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 40,
+	"collection": {
+		"requests": [
+			{
+				"id": "7ccd2b21-55b4-4bc5-812a-c479f20169c8",
+				"method": "GET"
+			},
+			{
+				"id": "6bda4c57-b8d3-4a09-b2aa-a32cf95b06cb",
+				"method": "GET"
+			},
+			{
+				"id": "7c2b60e7-0c9c-4c4e-973b-2f7894716166",
+				"method": "GET"
+			},
+			{
+				"id": "d1057e58-e79c-41c6-8de8-83f912cee1ba",
+				"method": "GET"
+			},
+			{
+				"id": "2ffc1cdf-7d1f-44e5-8df6-2d3b2dcbf238",
+				"method": "GET"
+			}
+		]
+	}
+}
